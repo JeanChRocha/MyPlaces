@@ -16,7 +16,7 @@
 
 @implementation TextFieldViewController
 
-@synthesize destination;
+//@synthesize destination;
 
 - (void)viewDidLoad
 {
@@ -83,7 +83,7 @@
     
     request.source = [MKMapItem mapItemForCurrentLocation];
     
-    request.destination = destination;
+    request.destination = _destination;
     request.requestsAlternateRoutes = NO;
     MKDirections *directions =
     [[MKDirections alloc] initWithRequest:request];
@@ -232,4 +232,13 @@
     
     [locationManager startUpdatingLocation];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ResultsTableViewController *destination =
+    [segue destinationViewController];
+    
+    destination.mapItems = _matchingItems;
+}
+
 @end

@@ -28,7 +28,7 @@
     CLLocationManager *locationManager;
 }
 
-@property (strong, nonatomic) IBOutlet MKMapView *routeMap;
+//@property (strong, nonatomic) IBOutlet MKMapView *routeMap;
 
 @property (strong, nonatomic) MKMapItem *destination;
 
