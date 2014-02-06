@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7968B5118A2A29D007A55FB /* ResultsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7968B5018A2A29D007A55FB /* ResultsTableCell.m */; };
+		F7968B5418A2A32C007A55FB /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7968B5318A2A32C007A55FB /* ResultsTableViewController.m */; };
+		F7968B5D18A2A754007A55FB /* MapSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7968B5C18A2A754007A55FB /* MapSampleViewController.m */; };
 		F7BCB8C918A1456900AA340E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BCB8C818A1456900AA340E /* Foundation.framework */; };
 		F7BCB8CB18A1456900AA340E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BCB8CA18A1456900AA340E /* CoreGraphics.framework */; };
 		F7BCB8CD18A1456900AA340E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BCB8CC18A1456900AA340E /* UIKit.framework */; };
@@ -21,6 +24,7 @@
 		F7BCB8EA18A1456A00AA340E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BCB8CC18A1456900AA340E /* UIKit.framework */; };
 		F7BCB8F218A1456A00AA340E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7BCB8F018A1456A00AA340E /* InfoPlist.strings */; };
 		F7BCB8F418A1456A00AA340E /* TextFieldMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCB8F318A1456A00AA340E /* TextFieldMapTests.m */; };
+		F7BCB8FE18A1463B00AA340E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BCB8FD18A1463B00AA340E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7968B4F18A2A29D007A55FB /* ResultsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableCell.h; sourceTree = "<group>"; };
+		F7968B5018A2A29D007A55FB /* ResultsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableCell.m; sourceTree = "<group>"; };
+		F7968B5218A2A32C007A55FB /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		F7968B5318A2A32C007A55FB /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
+		F7968B5B18A2A754007A55FB /* MapSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSampleViewController.h; sourceTree = "<group>"; };
+		F7968B5C18A2A754007A55FB /* MapSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSampleViewController.m; sourceTree = "<group>"; };
 		F7BCB8C518A1456900AA340E /* TextFieldMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BCB8C818A1456900AA340E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7BCB8CA18A1456900AA340E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +63,7 @@
 		F7BCB8EF18A1456A00AA340E /* TextFieldMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextFieldMapTests-Info.plist"; sourceTree = "<group>"; };
 		F7BCB8F118A1456A00AA340E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F7BCB8F318A1456A00AA340E /* TextFieldMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldMapTests.m; sourceTree = "<group>"; };
+		F7BCB8FD18A1463B00AA340E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7BCB8FE18A1463B00AA340E /* CoreLocation.framework in Frameworks */,
 				F7BCB8CB18A1456900AA340E /* CoreGraphics.framework in Frameworks */,
 				F7BCB8CD18A1456900AA340E /* UIKit.framework in Frameworks */,
 				F7BCB8C918A1456900AA340E /* Foundation.framework in Frameworks */,
@@ -88,6 +100,7 @@
 				F7BCB8C618A1456900AA340E /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		F7BCB8C618A1456900AA340E /* Products */ = {
 			isa = PBXGroup;
@@ -101,6 +114,7 @@
 		F7BCB8C718A1456900AA340E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7BCB8FD18A1463B00AA340E /* CoreLocation.framework */,
 				F7BCB8C818A1456900AA340E /* Foundation.framework */,
 				F7BCB8CA18A1456900AA340E /* CoreGraphics.framework */,
 				F7BCB8CC18A1456900AA340E /* UIKit.framework */,
@@ -116,9 +130,15 @@
 				F7BCB8D818A1456A00AA340E /* TextFieldAppDelegate.m */,
 				F7BCB8DA18A1456A00AA340E /* Main.storyboard */,
 				F7BCB8DD18A1456A00AA340E /* TextFieldViewController.h */,
+				F7968B4F18A2A29D007A55FB /* ResultsTableCell.h */,
+				F7968B5018A2A29D007A55FB /* ResultsTableCell.m */,
 				F7BCB8DE18A1456A00AA340E /* TextFieldViewController.m */,
+				F7968B5218A2A32C007A55FB /* ResultsTableViewController.h */,
+				F7968B5318A2A32C007A55FB /* ResultsTableViewController.m */,
 				F7BCB8E018A1456A00AA340E /* Images.xcassets */,
 				F7BCB8CF18A1456900AA340E /* Supporting Files */,
+				F7968B5B18A2A754007A55FB /* MapSampleViewController.h */,
+				F7968B5C18A2A754007A55FB /* MapSampleViewController.m */,
 			);
 			path = TextFieldMap;
 			sourceTree = "<group>";
@@ -253,6 +273,9 @@
 				F7BCB8DF18A1456A00AA340E /* TextFieldViewController.m in Sources */,
 				F7BCB8D918A1456A00AA340E /* TextFieldAppDelegate.m in Sources */,
 				F7BCB8D518A1456900AA340E /* main.m in Sources */,
+				F7968B5118A2A29D007A55FB /* ResultsTableCell.m in Sources */,
+				F7968B5418A2A32C007A55FB /* ResultsTableViewController.m in Sources */,
+				F7968B5D18A2A754007A55FB /* MapSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +400,6 @@
 		F7BCB8F818A1456A00AA340E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextFieldMap/TextFieldMap-Prefix.pch";
@@ -390,7 +412,6 @@
 		F7BCB8F918A1456A00AA340E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextFieldMap/TextFieldMap-Prefix.pch";
@@ -461,6 +482,7 @@
 				F7BCB8F918A1456A00AA340E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7BCB8FA18A1456A00AA340E /* Build configuration list for PBXNativeTarget "TextFieldMapTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +491,7 @@
 				F7BCB8FC18A1456A00AA340E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
