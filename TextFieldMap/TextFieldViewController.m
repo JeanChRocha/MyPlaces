@@ -40,10 +40,36 @@
         [self getDirections];
     
     
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(handleGesture:)];
+    lpgr.minimumPressDuration = 1.0;  //user must press for 2 seconds
+    [_worldmap addGestureRecognizer:lpgr];
+    //[lpgr release];
+    
+    
+    
     [super viewDidLoad];
     
     
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+
+- (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded)
+        return;
+    
+    CGPoint touchPoint = [gestureRecognizer locationInView:_worldmap];
+    CLLocationCoordinate2D touchMapCoordinate =
+    [_worldmap convertPoint:touchPoint toCoordinateFromView:_worldmap];
+    
+    MKPointAnnotation *pa = [[MKPointAnnotation alloc] init];
+    pa.coordinate = touchMapCoordinate;
+    //pa.title = item.name;
+    [_worldmap addAnnotation:pa];
+    [self getDirections];
+    //[pa release];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -217,6 +243,8 @@
             }
     }];
 }
+
+
 
 
 
