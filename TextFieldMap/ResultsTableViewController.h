@@ -12,5 +12,8 @@
 #import "TextFieldViewController.h"
 
 @interface ResultsTableViewController : UITableViewController
+
 @property (strong, nonatomic) NSArray *mapItems;
+
+
 @end

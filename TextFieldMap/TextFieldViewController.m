@@ -114,7 +114,7 @@
 }
 
 
-- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+- (MKOverlayRenderer *)mapView:(MKMapView *) _routeMap rendererForOverlay:(id < MKOverlay >)overlay
 {
     MKPolylineRenderer *renderer =
     [[MKPolylineRenderer alloc] initWithOverlay:overlay];
@@ -122,10 +122,6 @@
     renderer.lineWidth = 5.0;
     return renderer;
 }
-
-
-
-
 
 
 -(void) locationManager:(CLLocationManager *) manager didUpdateLocations:(NSArray *)locations
