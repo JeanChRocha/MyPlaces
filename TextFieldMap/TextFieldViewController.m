@@ -28,15 +28,15 @@
     [locationManager startUpdatingLocation];
     
     
-       _routeMap.showsUserLocation = YES;
-        MKUserLocation *userLocation = _routeMap.userLocation;
+       _worldmap.showsUserLocation = YES;
+        MKUserLocation *userLocation = _worldmap.userLocation;
     
         MKCoordinateRegion region =
         MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
                                            20000, 20000);
     
-        [_routeMap setRegion:region animated:YES];
-        _routeMap.delegate = self;
+        [_worldmap setRegion:region animated:YES];
+        _worldmap.delegate = self;
         [self getDirections];
     
     
@@ -103,7 +103,7 @@
 {
     for (MKRoute *route in response.routes)
     {
-        [_routeMap
+        [_worldmap
          addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         
         for (MKRouteStep *step in route.steps)
