@@ -44,6 +44,9 @@
     cell.nameLabel.text = item.name;
     cell.phoneLabel.text = item.phoneNumber;
     
+    cell.nameLabel.textColor = [UIColor purpleColor];
+    cell.nameLabel.font = [UIFont fontWithName:@"AppleGothic" size:16];
+    
     return cell;
 }
 
