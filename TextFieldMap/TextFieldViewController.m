@@ -186,7 +186,7 @@
 {
     MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:[view.annotation coordinate] addressDictionary:nil];
     MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-    //[self getDirectionsTo:mapItem];
+    [self getDirections:mapItem];
 }
 
 -(void)showRoute:(MKDirectionsResponse *)response
@@ -194,11 +194,11 @@
     for (MKRoute *route in response.routes)
     {
         NSUInteger seconds = (NSUInteger)round(route.expectedTravelTime);
-        NSString *string = [NSString stringWithFormat:@"%02u:%02u:%02u",
+        NSString *tempo = [NSString stringWithFormat:@"%02u:%02u:%02u",
                             seconds / 3600, (seconds / 60) % 60, seconds % 60];
-        NSLog(string);
-        [_worldmap
-         addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+        NSLog(tempo);
+        [_worldmap removeOverlays: _worldmap.overlays];
+        [_worldmap addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         
         for (MKRouteStep *step in route.steps)
         {
