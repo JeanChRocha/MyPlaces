@@ -182,6 +182,12 @@
      }];
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:[view.annotation coordinate] addressDictionary:nil];
+    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+    //[self getDirectionsTo:mapItem];
+}
 
 -(void)showRoute:(MKDirectionsResponse *)response
 {
