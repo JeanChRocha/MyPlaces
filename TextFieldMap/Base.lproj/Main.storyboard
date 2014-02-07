@@ -59,7 +59,7 @@
                                 <rect key="frame" x="0.0" y="527" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="😡" id="whz-gb-Rc8">
+                                    <barButtonItem title="🏠" id="whz-gb-Rc8">
                                         <connections>
                                             <action selector="Current:" destination="vXZ-lx-hvc" id="2D0-Wc-mxB"/>
                                         </connections>
