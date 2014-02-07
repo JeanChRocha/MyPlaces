@@ -37,7 +37,8 @@
     
         [_worldmap setRegion:region animated:YES];
         _worldmap.delegate = self;
-        [self getDirections];
+    MKMapItem *destino = _destination;
+    [self getDirections: destino];
     
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
@@ -158,14 +159,14 @@
 }
 
 
-- (void)getDirections
+- (void)getDirections : (MKMapItem *) destino
 {
     MKDirectionsRequest *request =
     [[MKDirectionsRequest alloc] init];
     
     request.source = [MKMapItem mapItemForCurrentLocation];
     
-    request.destination = _destination;
+    request.destination = destino;
     request.requestsAlternateRoutes = NO;
     MKDirections *directions =
     [[MKDirections alloc] initWithRequest:request];
@@ -175,6 +176,7 @@
          if (error) {
              // Handle error
          } else {
+             
              [self showRoute:response];
          }
      }];
@@ -185,6 +187,10 @@
 {
     for (MKRoute *route in response.routes)
     {
+        NSUInteger seconds = (NSUInteger)round(route.expectedTravelTime);
+        NSString *string = [NSString stringWithFormat:@"%02u:%02u:%02u",
+                            seconds / 3600, (seconds / 60) % 60, seconds % 60];
+        NSLog(string);
         [_worldmap
          addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         
