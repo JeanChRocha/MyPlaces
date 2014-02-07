@@ -42,9 +42,11 @@
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                           initWithTarget:self action:@selector(handleGesture:)];
-    lpgr.minimumPressDuration = 1.0;  //user must press for 2 seconds
+    lpgr.minimumPressDuration = .3;  //user must press for 2 seconds
     [_worldmap addGestureRecognizer:lpgr];
     //[lpgr release];
+    
+
     
     
     
@@ -53,6 +55,10 @@
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+
+
+
 
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
@@ -65,12 +71,62 @@
     [_worldmap convertPoint:touchPoint toCoordinateFromView:_worldmap];
     
     MKPointAnnotation *pa = [[MKPointAnnotation alloc] init];
+    
     pa.coordinate = touchMapCoordinate;
     //pa.title = item.name;
     [_worldmap addAnnotation:pa];
-    [self getDirections];
+    
+    
+//    MKAnnotationView *annotationView = [_worldmap dequeueReusableAnnotationViewWithIdentifier:@"Teste do malandro"];
+//    if (annotationView) {
+//        annotationView.annotation = pa;
+//    } else {
+//        annotationView = [[MKAnnotationView alloc] initWithAnnotation:pa reuseIdentifier:@"teste do malandro"];
+//        //coloca o poup up em cima do annotation
+//        annotationView.canShowCallout = YES;
+//        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//    }
+//    
+//    [_worldmap addAnnotation:annotationView];
+    
+    
+    //[self getDirections];
     //[pa release];
 }
+
+
+
+// TENTATIVA DE COLOCAR POP UP NO ANNOTATION
+
+//- (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(id<MKAnnotation>)annotation
+//{
+//    if ([annotation isKindOfClass:[MKUserLocation class]])
+//        {
+//            return nil;
+//            }
+//    
+//    static NSString * const identifier = @"MyCustomAnnotation";
+//    
+//    MKAnnotationView *annotationView = [aMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+//    
+//    if (annotationView) {
+//        annotationView.annotation = annotation;
+//        } else {
+//            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+//            //coloca o poup up em cima do annotation
+//            annotationView.canShowCallout = YES;
+//            annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//            
+//            }
+//    
+////    NSString *formattedName = name;
+////    
+////    formattedName = [formattedName lowercaseString];
+////    formattedName = [formattedName stringByReplacingOccurrencesOfString:@" " withString:@""];
+////    annotationView.image = [UIImage imageNamed:formattedName];
+//    
+//    return annotationView;
+//}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
